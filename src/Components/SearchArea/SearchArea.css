@@ -1,0 +1,263 @@
+.search-area {
+    width: 80%;
+    margin: auto;
+    padding-top: 2rem;
+}
+
+.search-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-title-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.search-input {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    padding: 0.3rem;
+    padding-right: 0.5rem;
+
+    border: 1px solid gray;
+    background-color: white;
+    border-radius: 0.3rem;
+}
+
+.search-input input {
+    border: none;
+}
+
+.search-input div:hover {
+    cursor: pointer;
+}
+
+.search-input input:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.filter-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: auto;
+    margin-top: 2rem;
+    padding: 1rem;
+
+    background-color: white;
+    border-radius: 0.5rem;
+    /* border: 1px solid black; */
+}
+
+.filter-area div {
+    width: 20%;
+}
+
+.filter-area input,
+.filter-area select {
+    margin-top: 0.2rem;
+    padding: 0.3rem;
+    padding-left: 0;
+
+    width: 90%;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    text-decoration: none;
+    border: none;
+}
+
+.filter-area input:focus,
+.filter-area select:focus {
+    outline: none;
+}
+
+.filter-area input::placeholder {
+    color: black;
+}
+
+.filter-location {
+    display: flex;
+    flex-direction: column;
+
+    border-right: 1px solid black;
+}
+
+.filter-date {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+
+    border-right: 1px solid black;
+}
+
+.filter-price {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+
+    border-right: 1px solid black;
+}
+
+.filter-price label {
+    padding-left: 0.2rem;
+}
+
+.filter-type {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+
+.filter-type label {
+    padding-left: 0.2rem;
+}
+
+.filter-price select:hover {
+    cursor: pointer;
+}
+
+.filter-type select:hover {
+    cursor: pointer;
+}
+
+.filter-submit {
+    padding: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    border: 1px solid rgb(100, 100, 255);
+    border-radius: 0.3rem;
+
+    background-color: rgb(100, 100, 255);
+    color: white;
+
+    font-size: 1.2rem;
+}
+
+.submit-button-container {
+    display: flex;
+    justify-content: flex-end;
+    /* border: 1px solid black; */
+}
+
+.filter-submit:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    .filter-area {
+        display: grid;
+        grid-template-columns: repeat(2, 30vw);
+    }
+
+    .filter-area div {
+        border: none;
+        width: 100%;
+    }
+
+    .filter-location {
+        border: none;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+
+    .filter-date {
+        border: none;
+        margin-right: 2rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+
+    .filter-price {
+        border: none;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .filter-type {
+        border: none;
+        margin-right: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .filter-submit {
+        margin-right: -7rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .search-area {
+        font-size: 0.8rem;
+    }
+
+    .search-title-text {
+        font-size: 2rem;
+    }
+
+    .search-input {
+        font-size: 0.8rem;
+    }
+
+    .filter-area input,
+    .filter-area select {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .search-title-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .search-input {
+        width: 30vw;
+    }
+
+    .search-input div {
+        display: none;
+    }
+
+    .filter-area {
+        width: 50vw;
+        grid-template-columns: repeat(1, 50vw);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .filter-location {
+        border: none;
+        margin-left: 1rem;
+    }
+
+    .filter-date {
+        border: none;
+        margin-left: 1rem;
+        margin-top: 0;
+    }
+
+    .filter-price {
+        border: none;
+        margin-left: 1rem;
+    }
+
+    .filter-type {
+        border: none;
+        margin-left: 1rem;
+    }
+
+    .filter-submit {
+        margin-left: 1rem;
+        margin-right: 4rem;
+        margin-top: 1rem;
+    }
+}

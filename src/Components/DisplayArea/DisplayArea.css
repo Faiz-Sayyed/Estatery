@@ -1,0 +1,26 @@
+.display-container {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 25vw);
+    grid-column-gap: 2vw;
+    grid-row-gap: 5vw;
+
+    width: 80%;
+    margin: auto;
+    margin-top: 3rem;
+
+    padding-bottom: 3rem;
+}
+
+@media screen and (max-width:1000px) {
+    .display-container {
+        grid-template-columns: repeat(2, 40vw);
+    }
+}
+
+@media screen and (max-width:700px) {
+    .display-container {
+        grid-template-columns: repeat(1, 40vw);
+    }
+}

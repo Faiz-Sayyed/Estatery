@@ -1,0 +1,125 @@
+.card {
+    width: 25vw;
+    border-radius: 0.5rem;
+    background-color: white;
+}
+
+.card-image {
+    height: 20vw;
+}
+
+.popular {
+    position: absolute;
+
+    margin-top: -1rem;
+
+    padding: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+
+    color: white;
+    background-color: rgb(100, 100, 255);
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border-radius: 0.5rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.card-price-area {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 1rem;
+}
+
+.card-price {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+
+    color: rgb(100, 100, 255);
+
+    font-weight: bold;
+}
+
+.card-price span {
+    font-size: 1rem;
+    font-weight: normal;
+    color: gray;
+}
+
+.liked-icon {
+    margin-right: 2rem;
+}
+
+.liked-icon:hover {
+    cursor: pointer;
+}
+
+.card-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    margin-left: 2rem;
+}
+
+.card-location {
+    margin-left: 2rem;
+}
+
+.line {
+    width: 80%;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-around;
+
+    padding: 1rem;
+
+    font-size: 0.9rem;
+}
+
+.card-details div {
+    display: flex;
+    align-items: center;
+}
+
+.card-details span {
+    font-size: 1rem;
+    margin-left: 0.3rem;
+}
+
+/* @media screen and (max-width: 1200px) {
+    .card-details {
+        flex-direction: column;
+        align-items: center;
+    }
+} */
+
+@media screen and (max-width: 1000px) {
+    .card {
+        width: 35vw;
+    }
+
+    .card-details {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .card {
+        width: 60vw;
+        margin-left: 40vw;
+    }
+}

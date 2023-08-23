@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react'
+import Navbar from './Components/Navbar/Navbar'
+import SearchArea from './Components/SearchArea/SearchArea'
+import DisplayArea from './Components/DisplayArea/DisplayArea'
+import data from './data.js'
 import './App.css';
 
 function App() {
+  const [searchResults, setSearchResults] = useState(data);
+  const [filterResults, setFilterResults] = useState(data);
+  const [finalResults, setFinalResults] = useState(data);
+
+  useEffect(() => {
+    setFinalResults(searchResults);
+  }, [searchResults]);
+
+  useEffect(() => {
+    setFinalResults(filterResults);
+  }, [filterResults]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>
+        <Navbar />
+      </div>
+      <div className="body-container">
+        <SearchArea data={data} setSearchResults={setSearchResults} setFilterResults={setFilterResults} />
+        <DisplayArea finalResults={finalResults} />
+      </div>
+    </>
   );
 }
 
